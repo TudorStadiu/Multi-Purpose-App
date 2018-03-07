@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "174776584912",
+    "firebase_url": "https://multipurpouseapp.firebaseio.com",
+    "project_id": "multipurpouseapp",
+    "storage_bucket": "multipurpouseapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174776584912:android:e0f4c9c8252376e9",
+        "android_client_info": {
+          "package_name": "com.example.valentinvasilescu.ceva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174776584912-23rrori2htkmpo0tq8fjktsvpkfjg1aj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.valentinvasilescu.ceva",
+            "certificate_hash": "e74125bf105e9ebc2c424eef3304acb579717e27"
+          }
+        },
+        {
+          "client_id": "174776584912-aaumhrrfaqnpea5volfdj24j7tgv7iea.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA063QULp8I0k3kj5h7rDVugXomJyUqOmM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174776584912-aaumhrrfaqnpea5volfdj24j7tgv7iea.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

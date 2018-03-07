@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.valentinvasilescu.ceva.QuizActivity"
+    android:background="#f5dc08">
+
+    <CheckBox
+        android:id="@+id/answer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="37dp"
+        android:visibility="invisible"
+        android:layout_below="@+id/question"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:id="@+id/answer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:layout_marginTop="58dp"
+        android:visibility="invisible"
+        android:layout_below="@+id/answer1"
+        android:layout_alignStart="@+id/answer1" />
+
+    <CheckBox
+        android:id="@+id/answer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:visibility="invisible"
+        android:layout_below="@+id/answer2"
+        android:layout_alignStart="@+id/answer2"
+        android:layout_marginTop="63dp" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textSize="30dp"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#06d61f"
+        android:visibility="invisible"
+        android:text="Submit"
+        android:onClick="verify_and_update"/>
+
+    <TextView
+        android:id="@+id/finaltext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Would you like to add a question?"
+        android:textSize="40dp"
+        android:visibility="visible"
+        android:layout_above="@+id/answer1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp" />
+
+    <Button
+        android:id="@+id/yesbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:background="#06d61f"
+        android:layout_marginStart="17dp"
+        android:layout_below="@+id/answer2"
+        android:layout_toEndOf="@+id/answer2"
+        android:onClick="addquestion"/>
+
+    <Button
+        android:id="@+id/nobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:background="#06d61f"
+        android:layout_alignBaseline="@+id/yesbutton"
+        android:layout_alignBottom="@+id/yesbutton"
+        android:layout_alignEnd="@+id/finaltext"
+        android:layout_marginEnd="22dp"
+        android:onClick="quiz_resume"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addquestion"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/finaltext"
+        android:layout_alignParentStart="true">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Write your question"
+        android:layout_below="@+id/question"
+        android:layout_alignParentStart="true"
+        android:id="@+id/ques"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addanswer1"
+        android:visibility="invisible"
+        android:layout_above="@+id/answer2"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="25dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write first answer"
+            android:id="@+id/ans1"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addanswer2"
+        android:layout_marginTop="14dp"
+        android:visibility="invisible"
+        android:layout_below="@+id/answer1"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/ans2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write second answer" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addanswer3"
+        android:visibility="invisible"
+        android:layout_below="@+id/answer2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp">
+
+    <EditText
+        android:id="@+id/ans3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Write third answer"
+        android:layout_alignTop="@+id/answer3"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/submit"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginBottom="54dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation='horizontal'
+        android:visibility="invisible"
+        android:weightSum="9">
+
+        <RadioButton
+            android:id="@+id/valid1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="1" />
+
+        <RadioButton
+            android:id="@+id/valid2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="2" />
+
+        <RadioButton
+            android:id="@+id/valid3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="3" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/answerquestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radioGroup"
+        android:layout_alignStart="@+id/answer3"
+        android:layout_marginBottom="16dp"
+        android:text="Which one is the corect answer?"
+        android:textSize="23dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/submit_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="9dp"
+        android:background="#06d61f"
+        android:onClick="quiz_resume"
+        android:text="Submit new question"
+        android:visibility="invisible" />
+
+</RelativeLayout>

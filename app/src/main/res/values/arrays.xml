@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="auth_array">
+        <item>bar@example.com:world:Tudor</item>
+        <item>vali@example.com:world:vali</item>
+    </string-array>
+
+
+</resources>
